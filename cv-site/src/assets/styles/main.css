@@ -228,7 +228,7 @@ button {
 }
 
 
-/* Inputs */
+/* Inputs: states */
 .input {
   font: inherit;
   padding: 10px 12px;
@@ -236,7 +236,35 @@ button {
   border-radius: var(--r-1);
   background: var(--c-surface);
   color: var(--c-text);
+  outline: none;
 }
+
+.input:hover {
+  border-color: var(--c-border-dark);
+}
+
+.input:focus-visible {
+  border-color: var(--c-outline);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.18);
+}
+
+/* Invalid (browser validering) */
+.input:invalid {
+  border-color: #c62828;
+}
+
+.input:invalid:focus-visible {
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.18);
+}
+
+/* Lite bättre textarea-känsla */
+textarea.input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+
 
 /* Buttons */
 .btn {
