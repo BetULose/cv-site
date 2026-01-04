@@ -264,3 +264,16 @@ button {
   font-size: 14px;
   color: var(--c-muted);
 }
+.home-cards {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.link {
+  color: var(--c-outline);
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
