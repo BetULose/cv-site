@@ -1,19 +1,5 @@
 export const experiences = [
-  {
-    id: "bollplanket",
-    role: "Grundare / Coach & Advisor",
-    company: "Bollplanket",
-    location: "Stockholm",
-    start: "2023-08",
-    summary:
-      "Grundare av Bollplanket med fokus på praktiskt ledarskap, coachande samtal och försäljningsutveckling. Arbetar med individer och organisationer som vill skapa tydlighet, ansvar och hållbara arbetssätt.",
-    bullets: [
-      "Utvecklar och genomför coachande samtal och program enligt ICF:s riktlinjer.",
-      "Leder workshops kring ledarskap, feedback, förväntansbilder och samarbete.",
-      "Stödjer chefer i förändring, beslutsfattande och prioritering i vardagen.",
-      "Ansvarar för hela affären, från prospektering till leverans och uppföljning."
-    ]
-  },
+  
   {
     id: "hp-channel",
     role: "Commercial Channel Manager / Försäljningschef",
@@ -31,6 +17,22 @@ export const experiences = [
       "Ingick i svensk ledningsgrupp med ansvar för mångfald och inkludering (DEI)."
     ]
   },
+  {
+    id: "bollplanket",
+    role: "Grundare / Coach & Advisor",
+    company: "Bollplanket",
+    location: "Stockholm",
+    start: "2023-08",
+    summary:
+      "Grundare av Bollplanket med fokus på praktiskt ledarskap, coachande samtal och försäljningsutveckling. Arbetar med individer och organisationer som vill skapa tydlighet, ansvar och hållbara arbetssätt.",
+    bullets: [
+      "Utvecklar och genomför coachande samtal och program enligt ICF:s riktlinjer.",
+      "Leder workshops kring ledarskap, feedback, förväntansbilder och samarbete.",
+      "Stödjer chefer i förändring, beslutsfattande och prioritering i vardagen.",
+      "Ansvarar för hela affären, från prospektering till leverans och uppföljning."
+    ]
+  },
+  
   {
     id: "hp-product_lead",
     role: "Produktchef & Team Lead",
