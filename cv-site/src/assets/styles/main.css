@@ -277,3 +277,95 @@ button {
 .link:hover {
   text-decoration: underline;
 }
+.home-hero {
+  display: grid;
+  gap: var(--s-4);
+  align-items: start;
+}
+
+.home-profile {
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: var(--s-4);
+  background: var(--c-surface);
+  display: grid;
+  gap: var(--s-3);
+  justify-items: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid var(--c-border);
+  background: var(--c-bg);
+}
+
+.home-badges {
+  display: flex;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid var(--c-border);
+  border-radius: 999px;
+  background: var(--c-bg);
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.icon-link:hover {
+  border-color: var(--c-outline);
+}
+
+.home-intro {
+  min-width: 0;
+}
+
+.home-lead {
+  margin: 0;
+}
+
+/* Cards (du har redan home-cards, men här kommer en desktop-variant) */
+.home-cards {
+  display: grid;
+  gap: var(--s-3);
+}
+
+/* Desktop-ish breakpoint */
+@media (min-width: 720px) {
+  .home-hero {
+    grid-template-columns: 220px 1fr;
+    gap: var(--s-4);
+  }
+
+  .home-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.about-lead {
+  margin: 0;
+}
+
+.about-grid {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: var(--s-1);
+}
+
+.note {
+  border-left: 4px solid var(--c-accent);
+  padding-left: var(--s-3);
+}
