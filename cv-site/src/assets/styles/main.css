@@ -1,14 +1,36 @@
 /* Bas: mobil först */
 :root {
+  /* Typografi */
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --lh-base: 1.5;
+
+  /* Spacing (mobil först) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+
+  /* Radier */
+  --r-1: 8px;
+
+  /* Färger (byt senare till dina Hi-Fi) */
+  --c-bg: #ffffff;
+  --c-surface: #ffffff;
+  --c-text: #111111;
+  --c-border: #dddddd;
+  --c-muted: #555555;
+
   color-scheme: light;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  line-height: var(--lh-base);
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
+  background: var(--c-bg);
+  color: var(--c-text);
 }
 
 a {
@@ -23,16 +45,16 @@ a {
 }
 
 .site-header, .site-footer {
-  padding: 16px;
+  padding: var(--s-4);
 }
 
 .site-main {
-  padding: 16px;
+  padding: var(--s-4);
 }
 
 .site-nav {
   display: flex;
-  gap: 12px;
+  gap: var(--s-3);
 }
 
 .nav-link.router-link-active {
@@ -46,13 +68,13 @@ a {
 
 .form {
   display: grid;
-  gap: 12px;
+  gap: var(--s-3);
   max-width: 40ch;
 }
 
 .field {
   display: grid;
-  gap: 6px;
+  gap: 6px; /* kan få token sen om du vill */
 }
 
 input, textarea, button {
@@ -60,24 +82,25 @@ input, textarea, button {
 }
 
 button {
-  padding: 10px 12px;
+  padding: 10px 12px; /* kan få token sen */
 }
 
 .jobs {
   display: grid;
-  gap: 12px;
+  gap: var(--s-3);
 }
 
 .job {
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  padding: 12px;
-  background: #ffffff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-1);
+  padding: var(--s-3);
+  background: var(--c-surface);
 }
 
 .job__meta {
   margin: 6px 0 0;
   font-size: 14px;
+  color: var(--c-muted);
 }
 
 .job__summary {
@@ -85,10 +108,20 @@ button {
 }
 
 .job__details {
-  margin-top: 8px;
+  margin-top: var(--s-2);
 }
 
 .job__summary-toggle {
   cursor: pointer;
+}
+.stack {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.row {
+  display: flex;
+  gap: var(--s-2);
+  flex-wrap: wrap;
 }
 
