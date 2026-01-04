@@ -13,15 +13,22 @@
   /* Radier */
   --r-1: 8px;
 
-  /* Färger (byt senare till dina Hi-Fi) */
-  --c-bg: #ffffff;
-  --c-surface: #ffffff;
-  --c-text: #111111;
-  --c-border: #dddddd;
-  --c-muted: #555555;
+/* Färger – från Figma */
+--c-bg: #ffffff;
+--c-surface: #f4f4f5;
+--c-text: #222222;
+--c-muted: #555555;
+--c-border: #dddddd;
 
-  --c-accent: #2f6fed;
-  --c-accent-contrast: #ffffff;
+--c-accent: #4caf50;
+--c-accent-hover: #66bb6a;
+--c-accent-active: #388e3c;
+--c-accent-contrast: #ffffff;
+
+--c-outline: #2e7d32;
+--c-gray-medium: #e5e7eb;
+--c-border-dark: #333333;
+
 
 
   color-scheme: light;
@@ -35,7 +42,12 @@ body {
   margin: 0;
   background: var(--c-bg);
   color: var(--c-text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: var(--lh-base);
 }
+
 
 a {
   color: inherit;
@@ -163,10 +175,25 @@ button {
 .bg-accent { background: var(--c-accent); }
 .bg-border { background: var(--c-border); }
 
-/* Typography tokens as classes */
-.t-h1 { font-size: 28px; font-weight: 700; margin: 0; }
-.t-h2 { font-size: 22px; font-weight: 700; margin: 0; }
-.t-h3 { font-size: 18px; font-weight: 700; margin: 0; }
+/* Typografi – från Figma */
+.t-h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.t-h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.t-h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
 
 /* Inputs */
 .input {
@@ -201,4 +228,8 @@ button {
 
 .card__title {
   margin: 0 0 var(--s-2) 0;
+}
+.meta {
+  font-size: 14px;
+  color: var(--c-muted);
 }
