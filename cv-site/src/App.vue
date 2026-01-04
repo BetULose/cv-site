@@ -1,30 +1,24 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="app">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Huvudmeny">
+        <RouterLink to="/" class="nav-link">Start</RouterLink>
+        <RouterLink to="/cv" class="nav-link">CV</RouterLink>
+        <RouterLink to="/projekt" class="nav-link">Projekt</RouterLink>
+        <RouterLink to="/kontakt" class="nav-link">Kontakt</RouterLink>
+      </nav>
+    </header>
+
+    <main id="main" class="site-main">
+      <RouterView />
+    </main>
+
+    <footer class="site-footer">
+      <small>© {{ new Date().getFullYear() }} Ditt Namn</small>
+    </footer>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script setup>
+import { RouterLink, RouterView } from "vue-router";
+</script>
