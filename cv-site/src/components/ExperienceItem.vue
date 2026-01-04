@@ -7,7 +7,7 @@
         <time :datetime="start">{{ formatMonth(start) }}</time>
         <span aria-hidden="true"> - </span>
         <time v-if="end" :datetime="end">{{ formatMonth(end) }}</time>
-        <span v-else>Nuvarande</span>
+        <span v-else>nu</span>
         <span v-if="location"> · {{ location }}</span>
       </p>
     </header>
@@ -34,11 +34,17 @@ defineProps({
   bullets: { type: Array, default: () => [] },
 });
 
-function formatMonth(yyyyMm) {
-  // Liten, stabil formattering utan bibliotek
-  const [y, m] = yyyyMm.split("-");
-  const months = ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
+function formatMonth(value) {
+  // Tillåt "YYYY-MM" eller "YYYY-MM-DD"
+  const [y, m] = value.split("-");
+  const months = [
+    "jan", "feb", "mar", "apr", "maj", "jun",
+    "jul", "aug", "sep", "okt", "nov", "dec"
+  ];
+
   const idx = Number(m) - 1;
+  if (!y || Number.isNaN(idx) || idx < 0 || idx > 11) return value;
+
   return `${months[idx]} ${y}`;
 }
 </script>
