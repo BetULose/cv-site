@@ -20,6 +20,10 @@
   --c-border: #dddddd;
   --c-muted: #555555;
 
+  --c-accent: #2f6fed;
+  --c-accent-contrast: #ffffff;
+
+
   color-scheme: light;
   font-family: var(--font-sans);
   line-height: var(--lh-base);
@@ -125,3 +129,76 @@ button {
   flex-wrap: wrap;
 }
 
+/* Style Guide helpers */
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: var(--s-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Swatches */
+.swatch {
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-1);
+  padding: var(--s-3);
+  background: var(--c-surface);
+}
+
+.swatch__box {
+  height: 48px;
+  border-radius: var(--r-1);
+  border: 1px solid var(--c-border);
+}
+
+.swatch__meta {
+  margin-top: var(--s-2);
+  display: grid;
+  gap: var(--s-1);
+}
+
+.bg-surface { background: var(--c-surface); }
+.bg-text { background: var(--c-text); }
+.bg-accent { background: var(--c-accent); }
+.bg-border { background: var(--c-border); }
+
+/* Typography tokens as classes */
+.t-h1 { font-size: 28px; font-weight: 700; margin: 0; }
+.t-h2 { font-size: 22px; font-weight: 700; margin: 0; }
+.t-h3 { font-size: 18px; font-weight: 700; margin: 0; }
+
+/* Inputs */
+.input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-1);
+  background: var(--c-surface);
+  color: var(--c-text);
+}
+
+/* Buttons */
+.btn {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: var(--r-1);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn--primary { background: var(--c-accent); color: var(--c-accent-contrast); }
+.btn--secondary { background: var(--c-text); color: var(--c-bg); }
+.btn--ghost { background: transparent; border-color: var(--c-border); color: var(--c-text); }
+
+/* Card */
+.card {
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: var(--s-4);
+  background: var(--c-surface);
+}
+
+.card__title {
+  margin: 0 0 var(--s-2) 0;
+}
