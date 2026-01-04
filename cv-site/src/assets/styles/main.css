@@ -114,14 +114,18 @@ button {
   background: var(--c-surface);
 }
 
+.job__title {
+  margin: 0;
+}
+
 .job__meta {
-  margin: 6px 0 0;
+  margin: var(--s-1) 0 0;
   font-size: 14px;
   color: var(--c-muted);
 }
 
 .job__summary {
-  margin: 10px 0 0;
+  margin: var(--s-2) 0 0;
 }
 
 .job__details {
@@ -130,6 +134,8 @@ button {
 
 .job__summary-toggle {
   cursor: pointer;
+  color: var(--c-outline);
+  font-weight: 600;
 }
 .stack {
   display: grid;
