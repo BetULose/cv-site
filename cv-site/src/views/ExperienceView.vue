@@ -5,17 +5,18 @@
     <section aria-labelledby="jobs">
       <h2 id="jobs">Tidigare roller</h2>
 
-      <article class="job">
-        <h3>Jobb 1 – Titel</h3>
-        <p>Beskrivning…</p>
-        <button>Läs mer</button>
-      </article>
-
-      <article class="job">
-        <h3>Jobb 2 – Titel</h3>
-        <p>Beskrivning…</p>
-        <button>Läs mer</button>
-      </article>
+      <div class="jobs">
+        <ExperienceItem
+          v-for="job in experiences"
+          :key="job.id"
+          v-bind="job"
+        />
+      </div>
     </section>
   </article>
 </template>
+
+<script setup>
+import ExperienceItem from "../components/ExperienceItem.vue";
+import { experiences } from "../data/experience";
+</script>
