@@ -114,12 +114,24 @@ button {
   background: var(--c-surface);
 }
 
+.job__header {
+  display: grid;
+  gap: var(--s-1);
+}
+
 .job__title {
   margin: 0;
+  font-size: 16px; /* matchar min H3 i Figma */
+  font-weight: 600;
+}
+
+.job__at {
+  font-weight: 400;
+  color: var(--c-muted);
 }
 
 .job__meta {
-  margin: var(--s-1) 0 0;
+  margin: 0;
   font-size: 14px;
   color: var(--c-muted);
 }
@@ -137,6 +149,18 @@ button {
   color: var(--c-outline);
   font-weight: 600;
 }
+
+.job__summary-toggle:hover {
+  text-decoration: underline;
+}  
+
+.job__bullets {
+  margin: var(--s-2) 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: var(--s-1);
+}
+
 .stack {
   display: grid;
   gap: var(--s-3);
