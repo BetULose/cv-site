@@ -369,3 +369,43 @@ button {
   border-left: 4px solid var(--c-accent);
   padding-left: var(--s-3);
 }
+.site-footer {
+  padding: var(--s-4);
+  border-top: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+.footer-nav {
+  display: flex;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  color: var(--c-text);
+  font-weight: 600;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-meta {
+  margin: var(--s-2) 0 0;
+  font-size: 14px;
+}
+.site-header {
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.brand {
+  font-weight: 600;
+}
