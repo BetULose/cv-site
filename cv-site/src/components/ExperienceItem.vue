@@ -5,7 +5,7 @@
 
       <p class="job__meta">
         <time :datetime="start">{{ formatMonth(start) }}</time>
-        <span aria-hidden="true">–</span>
+        <span aria-hidden="true"> - </span>
         <time v-if="end" :datetime="end">{{ formatMonth(end) }}</time>
         <span v-else>Nuvarande</span>
         <span v-if="location"> · {{ location }}</span>
@@ -24,7 +24,7 @@
   </article>
 </template>
 <script setup>
-const props = defineProps({
+defineProps({
   role: { type: String, required: true },
   company: { type: String, required: true },
   location: { type: String, default: "" },
