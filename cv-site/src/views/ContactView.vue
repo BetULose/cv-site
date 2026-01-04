@@ -1,51 +1,71 @@
 <template>
-  <section class="page">
-    <h1>Kontakt</h1>
+  <article class="page stack">
+    <header class="stack">
+      <h1 class="t-h1">Kontakt</h1>
+      <p class="muted">
+        Skicka ett meddelande så återkommer jag.
+      </p>
+    </header>
 
-    <form class="form" @submit.prevent="onSubmit" novalidate>
+    <form class="form" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="t-h2" style="position:absolute; left:-9999px;">
+        Kontaktformulär
+      </h2>
+
       <div class="field">
         <label for="name">Namn</label>
-        <input id="name" v-model.trim="form.name" type="text" autocomplete="name" required />
+        <input
+          id="name"
+          name="name"
+          class="input"
+          type="text"
+          autocomplete="name"
+          required
+        />
       </div>
 
       <div class="field">
         <label for="email">E-post</label>
-        <input id="email" v-model.trim="form.email" type="email" autocomplete="email" required />
+        <input
+          id="email"
+          name="email"
+          class="input"
+          type="email"
+          autocomplete="email"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="subject">Ämne</label>
+        <input
+          id="subject"
+          name="subject"
+          class="input"
+          type="text"
+          autocomplete="off"
+        />
       </div>
 
       <div class="field">
         <label for="message">Meddelande</label>
-        <textarea id="message" v-model.trim="form.message" rows="6" required />
+        <textarea
+          id="message"
+          name="message"
+          class="input"
+          rows="6"
+          required
+        ></textarea>
       </div>
 
-      <button type="submit">Skicka</button>
+      <div class="row">
+        <button class="btn btn--primary" type="submit">Skicka</button>
+        <RouterLink class="btn btn--ghost" to="/">Till startsidan</RouterLink>
+      </div>
 
-      <p v-if="status" class="status" role="status">{{ status }}</p>
+      <p class="muted" style="font-size:14px;">
+        Genom att skicka formuläret godkänner du att jag hanterar dina uppgifter för att kunna svara.
+      </p>
     </form>
-      </section>
+  </article>
 </template>
-
-<script setup>
-import { reactive, ref } from "vue";
-
-const form = reactive({
-  name: "",
-  email: "",
-  message: "",
-});
-
-const status = ref("");
-
-function onSubmit() {
-  // Första versionen: bara validera enkelt och “fejka” submit.
-  if (!form.name || !form.email || !form.message) {
-    status.value = "Fyll i alla fält.";
-    return;
-  }
-  
-  status.value = "Tack! Jag återkommer så snart jag kan.";
-  form.name = "";
-  form.email = "";
-  form.message = "";
-}
-</script>
