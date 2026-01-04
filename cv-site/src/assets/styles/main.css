@@ -1,7 +1,7 @@
 /* Bas: mobil först */
 :root {
   /* Typografi */
---font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
   --lh-base: 1.5;
 
@@ -81,7 +81,9 @@ a {
 
 .page {
   max-width: 60ch;
+  margin: 0 auto;
 }
+
 
 .form {
   display: grid;
@@ -408,4 +410,15 @@ button {
 
 .brand {
   font-weight: 600;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
