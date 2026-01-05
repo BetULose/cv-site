@@ -31,4 +31,9 @@ import SiteNav from "./SiteNav.vue";
 import MenuOverlay from "./MenuOverlay.vue";
 
 const open = ref(false);
+import { watch } from "vue";
+watch(open, (isOpen) => {
+  document.body.style.overflow = isOpen ? "hidden" : "";
+});
+
 </script>

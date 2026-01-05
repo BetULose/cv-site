@@ -5,7 +5,6 @@
     <RouterLink to="/projekt" class="nav-link">Projekt</RouterLink>
     <RouterLink to="/kontakt" class="nav-link">Kontakt</RouterLink>
     <RouterLink to="/om" class="nav-link">Om</RouterLink>
-    <RouterLink to="/styles" class="nav-link">Styles</RouterLink>
   </nav>
 </template>
 
