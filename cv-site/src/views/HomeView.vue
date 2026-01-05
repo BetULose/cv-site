@@ -54,13 +54,14 @@
 
         <article class="card stack">
           <h3 class="t-h3">Projekt</h3>
-          <p class="muted">
-            Exempel på projekt och arbetssätt, både från arbetslivet och från studier/utveckling.
-          </p>
+            <p class="muted">
+                Projekt som spänner från produkt- och sortimentsstyrning till förändringsledning och partnerprogram.
+            </p>
           <RouterLink class="link" to="/projekt">Se projekt</RouterLink>
         </article>
       </div>
     </section>
+
 
     <!-- Latest experience -->
     <section class="stack" aria-labelledby="latest">
@@ -74,9 +75,14 @@
 
 <script setup>
 import { computed } from "vue";
+
 import ExperienceItem from "../components/ExperienceItem.vue";
-import { experiences } from "../data/experience";
 import profileImg from "../assets/profile.jpg";
+
+import { experiences } from "../data/experience";
+import { projects } from "../data/projects";
+
+const projectTeasers = computed(() => projects.slice(0, 3));
 
 function toSortValue(job) {
   const end = job.end && job.end.trim() ? job.end : "9999-12";
@@ -88,3 +94,4 @@ const latest = computed(() => {
   return sorted[0] || null;
 });
 </script>
+
