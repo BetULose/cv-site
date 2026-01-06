@@ -7,6 +7,12 @@
 
     <p v-if="summary" class="muted">{{ summary }}</p>
 
+    <p v-if="context" class="meta">{{ context }}</p>
+
+    <ul v-if="bullets?.length" class="list">
+        <li v-for="(b, i) in bullets" :key="i">{{ b }}</li>
+    </ul>
+
     <ul v-if="tags?.length" class="tags" aria-label="Teknik">
       <li v-for="tag in tags" :key="tag" class="tag">{{ tag }}</li>
     </ul>
@@ -29,9 +35,12 @@
 <script setup>
 defineProps({
   title: { type: String, required: true },
-  period: { type: String, default: "" },
+  context: { type: String, default: "" },
+  period: { type: String, default: "" }, // om du vill behålla den
   summary: { type: String, default: "" },
+  bullets: { type: Array, default: () => [] },
   tags: { type: Array, default: () => [] },
   links: { type: Array, default: () => [] },
 });
+
 </script>

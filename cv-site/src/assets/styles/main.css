@@ -422,6 +422,20 @@ textarea.input {
   gap: var(--s-3);
 }
 
+.about-figure {
+  margin: 0;
+}
+
+.about-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--c-border);
+  background: var(--c-surface);
+}
+
+
 .list {
   margin: 0;
   padding-left: 18px;
@@ -576,7 +590,7 @@ textarea.input {
   border-left: 1px solid var(--c-border);
   padding: var(--s-4);
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   gap: var(--s-4);
 }
 
@@ -603,6 +617,57 @@ textarea.input {
   border-color: var(--c-outline);
 }
 
+.overlay__profile {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.overlay__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid var(--c-border);
+  background: var(--c-bg);
+}
+
+.overlay__profile-text {
+  display: grid;
+  gap: 2px;
+}
+
+.overlay__name {
+  line-height: 1.2;
+}
+
+/* Aktiv länk i overlay */
+.overlay__link.router-link-active {
+  border-color: var(--c-outline);
+  color: var(--c-outline);
+}
+
+.overlay__link.router-link-active::after {
+  content: "✓";
+  margin-left: auto;
+  font-weight: 700;
+}
+
+/* Footer i panelen */
+.overlay__footer {
+  margin-top: auto;
+}
+
+.overlay__smalllink {
+  font-weight: 600;
+  color: var(--c-outline);
+}
+
+.overlay__smalllink:hover {
+  text-decoration: underline;
+}
+
+
 /* Desktop */
 @media (min-width: 720px) {
   .site-header__nav {
@@ -611,4 +676,7 @@ textarea.input {
   .site-header__menu {
     display: none;
   }
+}
+.card .list {
+  margin-top: var(--s-2);
 }

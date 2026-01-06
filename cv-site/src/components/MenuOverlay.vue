@@ -7,7 +7,7 @@
         <div class="overlay__profile">
           <img class="overlay__avatar" :src="profileImg" alt="Profilbild" />
           <div class="overlay__profile-text">
-            <strong class="overlay__name">Johan Daniel Antonsson</strong>
+            <strong class="overlay__name">Daniel Antonsson</strong>
             <span class="muted" style="font-size: 14px;">Ledarskap · Försäljning · Coaching</span>
           </div>
         </div>

@@ -1,5 +1,20 @@
-# Vue 3 + Vite
+# CV-sajt – Vue 3
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+En enkel, responsiv CV-sajt byggd med Vue 3 och Vite.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Teknik
+- Vue 3
+- Vite
+- Vue Router
+- Semantisk HTML
+- CSS med design tokens (mobil först)
+
+## Struktur
+- `/views` – sidor
+- `/components` – återanvändbara komponenter
+- `/data` – innehåll (erfarenhet, projekt)
+- `/assets/styles` – styles och tokens
+
+## Syfte
+Projektet är en del av utbildningen IT-projektledning och är även tänkt som grund för vidare utveckling.
+

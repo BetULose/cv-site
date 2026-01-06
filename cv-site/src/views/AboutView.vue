@@ -1,3 +1,7 @@
+<script setup>
+import aboutImg from "../assets/about.jpg";
+</script>
+
 <template>
   <article class="page stack">
     <header class="stack">
@@ -7,6 +11,9 @@
         göra saker begripliga, genomförbara och hållbara i vardagen.
       </p>
     </header>
+<figure class="about-figure">
+    <img class="about-image" :src="aboutImg" alt="Daniel Antonsson, porträtt" />
+</figure>
 
     <section class="stack" aria-labelledby="summary">
       <h2 id="summary" class="t-h2">Sammanfattning</h2>
